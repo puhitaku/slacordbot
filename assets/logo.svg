@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.3.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+<g id="レイヤー_3">
+	<rect fill="#FFFFFF" width="512" height="512"/>
+</g>
+<g id="レイヤー_1">
+	<g>
+		<defs>
+			<rect id="SVGID_1_" width="512" height="512"/>
+		</defs>
+		<clipPath id="SVGID_00000114043468739107752570000013653814636099918753_">
+			<use xlink:href="#SVGID_1_"  overflow="visible"/>
+		</clipPath>
+		<circle clip-path="url(#SVGID_00000114043468739107752570000013653814636099918753_)" fill="#36C4F0" cx="0" cy="0" r="242.42"/>
+		
+			<circle clip-path="url(#SVGID_00000114043468739107752570000013653814636099918753_)" fill="#EDB22E" cx="512" cy="512" r="242.42"/>
+		
+			<circle clip-path="url(#SVGID_00000114043468739107752570000013653814636099918753_)" fill="#E01E59" cx="0" cy="512" r="242.42"/>
+		
+			<circle clip-path="url(#SVGID_00000114043468739107752570000013653814636099918753_)" fill="#4ABF8E" cx="512" cy="0" r="242.42"/>
+	</g>
+	<g>
+		<circle fill="#5865F2" cx="256" cy="256" r="157.59"/>
+	</g>
+	<g>
+		<g>
+			<g>
+				<circle fill="#FFFFFF" cx="190.66" cy="207.05" r="23.04"/>
+			</g>
+			<g>
+				<circle fill="#FFFFFF" cx="321.34" cy="207.05" r="23.04"/>
+			</g>
+		</g>
+		<path fill="none" stroke="#FFFFFF" stroke-width="15" stroke-linecap="round" stroke-miterlimit="10" d="M181.95,289.51
+			c6.27,28.69,37.02,50.48,74.05,50.48s67.78-21.79,74.05-50.48"/>
+	</g>
+</g>
+</svg>
