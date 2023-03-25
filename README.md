@@ -25,3 +25,8 @@ $ DISCORD_TOKEN=... cargo run
  - Allow the bot to read/send messages
  - Define keyword:response pairs in config.json
  - Use the icon in the assets directory if you like :blush:
+
+
+## Appendix
+
+`convert_slackbot.py` converts the response from `https://{workspace}.slack.com/api/slackbot.responses.list` into the config.json.
