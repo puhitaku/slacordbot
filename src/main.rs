@@ -68,7 +68,7 @@ fn read_config() -> Result<SlacordConfig, io::Error> {
     };
 
     let config: SlacordConfig = serde_json::from_str(config_raw.as_str())?;
-    println!("Successfully loaded: {:?}", config);
+    println!("Successfully loaded: {} reactions", config.responses.len());
 
     return Ok(config);
 }
