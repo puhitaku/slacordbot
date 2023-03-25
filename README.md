@@ -6,6 +6,14 @@
   <img width=192px src="./assets/logo.png">
 </div>
 
+
+## Why
+
+Although many popular Discord bots have a trigger feature, they typically do not support the functionality of providing a random response from a list of multiple choices, which is a feature that Slackbot offers.
+
+This bot is for those who want to migrate the Slackbot auto response to Discord as-is.
+
+
 ## How to run
 
 ```
