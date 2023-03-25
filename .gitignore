@@ -18,3 +18,7 @@ Cargo.lock
 
 .fleet
 .vscode
+
+# macOS
+
+.DS_Store
