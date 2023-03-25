@@ -1,0 +1,5 @@
+{
+  "responses": {
+    "hello": ["こんにちは", "你好", "Selamat pagi", "Hola", "Guten Tag"]
+  }
+}
