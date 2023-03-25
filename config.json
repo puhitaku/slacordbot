@@ -1,5 +1,8 @@
 {
-  "responses": {
-    "hello": ["こんにちは", "你好", "Selamat pagi", "Hola", "Guten Tag"]
-  }
+  "responses": [
+    {
+      "triggers": ["hello", "hi"],
+      "responses": ["こんにちは", "你好", "Selamat pagi", "Hola", "Guten Tag"]
+    }
+  ]
 }

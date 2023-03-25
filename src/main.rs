@@ -1,4 +1,3 @@
-use std::collections::HashMap;
 use std::{env, fs, io};
 
 use serde::{Deserialize, Serialize};
@@ -9,8 +8,14 @@ use serenity::model::channel::Message;
 use serenity::prelude::*;
 
 #[derive(Serialize, Deserialize, Debug)]
+struct Response {
+    triggers: Vec<String>,
+    responses: Vec<String>,
+}
+
+#[derive(Serialize, Deserialize, Debug)]
 struct SlacordConfig {
-    responses: HashMap<String, Vec<String>>,
+    responses: Vec<Response>,
 }
 
 #[group]
@@ -30,18 +35,24 @@ impl EventHandler for Handler {
 
         let tokens: Vec<&str> = msg.content.split(" ").collect();
 
-        for (key, value) in &self.config.responses {
-            for &token in &tokens {
-                if !token.eq(key.as_str()) {
-                    continue;
-                }
+        for response in &self.config.responses {
+            for trigger in &response.triggers {
+                for &token in &tokens {
+                    if !token.eq(trigger.as_str()) {
+                        continue;
+                    }
 
-                println!("'{}' matched {}: {:?}", token, key, value);
+                    println!("'{}' matched {}: {:?}", token, trigger, response);
 
-                let index = rand::random::<usize>() % value.len();
+                    let index = rand::random::<usize>() % response.responses.len();
 
-                if let Err(why) = msg.channel_id.say(&ctx.http, &value[index]).await {
-                    println!("Error sending message: {:?}", why);
+                    if let Err(why) = msg
+                        .channel_id
+                        .say(&ctx.http, &response.responses[index])
+                        .await
+                    {
+                        println!("Error sending message: {:?}", why);
+                    }
                 }
             }
         }
