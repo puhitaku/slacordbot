@@ -26,6 +26,19 @@ $ DISCORD_TOKEN=... cargo run
  - Define keyword:response pairs in config.json
  - Use the icon in the assets directory if you like :blush:
 
+An example of `docker-compose.yml` is as follows. The `config.json` needs to be in `/app`.
+
+```
+version: '3'
+services:
+  slacordbot:
+    image: puhitaku/slacordbot
+    environment:
+      DISCORD_TOKEN: "YOUR_DISCORD_BOT_TOKEN"
+    volumes:
+      - '/path/to/config_json_dir:/app'
+```
+
 
 ## Appendix
 
