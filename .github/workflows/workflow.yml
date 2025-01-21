@@ -1,0 +1,29 @@
+name: Publish Docker Image
+
+on:
+  push:
+    tags:
+      - "*"
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Login to DockerHub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+
+      - name: Build and Push
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          file: Dockerfile
+          platforms: linux/amd64
+          push: true
+          tags: |
+            ${{ secrets.DOCKERHUB_USERNAME }}/slacordbot:${{ github.ref_name }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/slacordbot:latest
